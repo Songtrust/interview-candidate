@@ -1,0 +1,12 @@
+{
+  "name": "studio-dev",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "workspaceMount": "source=${localWorkspaceFolder}/workspace,target=/workspace,type=bind",
+  "workspaceFolder": "/workspace",
+  "overrideCommand": true,
+  "forwardPorts": [3000, 5173, 8000],
+  "remoteUser": "node"
+}
